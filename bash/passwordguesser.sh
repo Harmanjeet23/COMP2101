@@ -9,46 +9,7 @@
 # TASK 3: Improve it by giving them 5 tries to get it right before failing
 #           *** Do not use the exit command, and do not use a loop (e.g. while or for)
 
-done="It's matched."
-error="Try Again..."
-referenceString="password01" #Creating a variable referenceString to store password.
-read -s -p "Guess the string:" myString #getting input from user silently for password and storing it into $my string.
-echo
-#using if else conditions 5 times to check whether input is valid .
-if [ $myString = $referenceString ]; then
-  echo "$done"
-  echo
-else
-  echo "$error"
-  read -s -p "Guess the password:" myString
- if [ $myString = $referenceString ]; then
-   echo "$done"
-   echo
- else
-   echo
-   echo "$error"
-   read -s -p "Guess the password:" myString
-   if [ $myString = $referenceString ]; then
-     echo "$done"
-     echo
-   else
-     echo
-     echo "$error"
-   read -s -p "Guess the password:" myString
-if [ $myString = $referenceString ]; then
-  echo "$done"
-  echo
-else
-  echo "$error"
-  read -s -p "Guess the password:" myString
-	if [ $myString = $referenceString ]; then
-  echo "$done"
-  echo
-else
-  echo "error occured because of failed attempt."
- fi
-fi
- fi
-fi
- fi
- 
+myString="TestString"
+referenceString="password"
+
+[ $myString = $referenceString ] && echo "Correct!" || echo "Incorrect."
